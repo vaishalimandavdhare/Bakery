@@ -1,0 +1,166 @@
+/*
+	Todd Motto Labs
+	URL: www.toddmotto.com
+*/
+
+/*------------------------------------*\
+    Responsive Navigation
+\*------------------------------------*/
+/*
+	Todd Motto Labs
+	URL: www.toddmotto.com
+*/
+
+/*------------------------------------*\
+    RESET
+\*------------------------------------*/
+
+
+/*------------------------------------*\
+    STRUCTURE
+\*------------------------------------*/
+
+
+.logo {
+	float:left;
+}
+.demo-nav {
+	float:right;
+	margin:12px 0;
+	list-style:none;
+}
+.demo-nav-link {
+	
+}
+.demo-nav-link a {
+	color:#2BA6CB;
+	text-decoration:none;
+}
+
+
+.content {
+	text-align:left;
+	margin:25px 0;
+}
+.content-text {
+	margin:0 0 15px;
+}
+/* Navigation styling */
+.nav {
+	position:relative;
+	display:inline-block;
+	align-items: center;
+	text-align: center;
+	text-transform: uppercase;
+	float: none;
+	line-height: 0.875rem;
+
+
+}
+.nav-list {
+	
+}
+.nav-item {
+	float:left;
+	*display:inline;
+	zoom:1;
+}
+
+
+.nav-item a::after{
+	content: '~';
+	font-size: 10px;
+	display: inline-block;
+	font-family: 'FontAwesome';
+	font-weight: normal;
+	padding: 0 50px;
+	cursor: none;
+	color: #fff;
+}
+.nav-item:last-child a::after{
+content: '';
+}
+.nav-item a {
+	display:block;
+	padding:0px 0px;
+	color:#FFF;
+	transition:1s;	
+	-webkit-transition:1s;	
+	-moz-transition:1s;	
+	-ms-transition:1s;	
+	-o-transition:1s;
+
+
+}
+
+
+@media screen and (max-width: 64rem) {
+
+.nav-item a::after{
+	padding: 0  2.5rem;
+}
+}
+
+
+.nav-item a:hover {
+	color: #a10107;
+}
+/* Mobile Navigation */
+.nav-mobile {
+	display:none; /* Hide from browsers that don't support media queries */
+	cursor:pointer;
+	position:absolute;
+	top:-47px;
+	right:0;
+	background:rgba(255,255,255,.3) url(../images/nav.svg) no-repeat center center;
+	height:40px;
+	width:40px;
+	border-radius:5px;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+}
+
+/*------------------------------------*\
+    Media Queries
+\*------------------------------------*/
+
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+	.nav-mobile {
+		display:block;
+	}
+	.nav {
+		width:100%;
+		padding:0px 0 0;
+	}
+	.nav-list {
+		display:none;
+	}
+	.nav-item {
+		width:100%;
+		float:none;
+	}
+	.nav-item a {
+		background:rgba(0,0,0,.3);
+		padding:10px;
+	}
+	.nav-item:first-child a {
+		border-radius:5px 0 0;
+	}
+	.nav-item:last-child a {
+		border-radius:0 0 5px 5px;
+	}
+	.nav-active {
+		display:block;
+		position: absolute;
+		right: 0;
+		top: -8px;
+	}
+	.nav-active a::after{
+		content: '';
+	}
+	.nav-mobile-open {
+		border-radius:5px 5px 0 0;
+		-webkit-border-radius:5px 5px 0 0;
+		-moz-border-radius:5px 5px 0 0;
+	}
+}
